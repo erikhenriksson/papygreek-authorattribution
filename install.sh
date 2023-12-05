@@ -1,5 +1,5 @@
 #!/bin/bash
-python3 -m venv .venv.nosync --prompt authorprofiling
+python3 -m venv .venv.nosync --prompt papygreek-authorattribution
 source ./.venv.nosync/bin/activate
 pip3 install -r requirements.txt
 pip3 uninstall -y adjusttext
