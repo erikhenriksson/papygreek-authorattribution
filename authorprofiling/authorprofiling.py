@@ -95,9 +95,19 @@ def ngram_transformers(name, n1, n2):
             TfidfVectorizer(analyzer="char", ngram_range=(n1, n2)),
             "text",
         ),
+        "word_ngrams_bow": (
+            f"word_nrams_bow-{n1}/{n2}",
+            CountVectorizer(ngram_range=(n1, n2)),
+            "text",
+        ),
+        "word_ngrams_tfidf": (
+            f"word_nrams_tfidf-{n1}/{n2}",
+            TfidfVectorizer(ngram_range=(n1, n2)),
+            "text",
+        ),
         f"lemmas_ngrams_bow": (
             f"lemmas_ngrams_bow-{n1}/{n2}",
-            CountVectorizer(analyzer="char", ngram_range=(n1, n2)),
+            CountVectorizer(ngram_range=(n1, n2)),
             "lemmas",
         ),
         f"lemmas_ngrams_tfidf": (
@@ -107,7 +117,7 @@ def ngram_transformers(name, n1, n2):
         ),
         f"postags_ngrams_bow": (
             f"postags_ngrams_bow-{n1}/{n2}",
-            CountVectorizer(analyzer="char", ngram_range=(n1, n2)),
+            CountVectorizer(ngram_range=(n1, n2)),
             "postags",
         ),
         f"postags_ngrams_tfidf": (
