@@ -1,11 +1,7 @@
 -target author 
 -persons 155 107 105 380 99
--#persons 134 380 133 684 
--#features function_words_tfidf
--#features function_words_fasttext_tfidf
--#features character_bigrams
--features function_words_fasttext_tfidf
+-features character_ngrams_bow-15
 -min_tokens 100
--plot 3d
--clusters 1
+-clusters 5
+-mode classification
 -arrows
